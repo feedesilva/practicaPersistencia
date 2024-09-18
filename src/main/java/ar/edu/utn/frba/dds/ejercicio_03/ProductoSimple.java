@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,7 +12,8 @@ import javax.persistence.Table;
 @Setter
 
 @Entity
-@Table (name = "productoSimple")
+@DiscriminatorValue("simple")
+
 public class ProductoSimple extends Producto{
   @Column(name = "precio")
   private Double precio;

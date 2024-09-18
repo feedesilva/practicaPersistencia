@@ -8,7 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "combo")
+@DiscriminatorValue("combo")
+
 public class Combo extends Producto{
 
   @Id

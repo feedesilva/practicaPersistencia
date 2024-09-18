@@ -10,6 +10,8 @@ import javax.persistence.*;
 @Entity
 //@Table (name = "producto")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table (name = "producto" )
+@DiscriminatorColumn(name = "tipoProducto")
 
 public abstract class Producto {
     @Id

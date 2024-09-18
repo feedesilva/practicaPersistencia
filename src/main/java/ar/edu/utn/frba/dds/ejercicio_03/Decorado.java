@@ -8,8 +8,12 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "decorado")
+@DiscriminatorValue("decorado")
+
 @Inheritance (strategy = InheritanceType.SINGLE_TABLE)
+@Table(name = "decorado")
+@DiscriminatorColumn(name = "tipoDecorado")
+
 public abstract class Decorado extends Producto{
 
   @Id
